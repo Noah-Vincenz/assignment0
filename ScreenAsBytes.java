@@ -3,7 +3,6 @@ public class ScreenAsBytes {
     public static void setPixel(byte[] screen, int width, int x, int y) {
         int byteWidth = width / 8;
         int height = screen.length / byteWidth; 
-        int count = 0;
         String stringOfInts = "";
         for (int i1 = 0; i1 < height; i1++) {
         	for (int i2 = 0; i2 < width; i2++) {
@@ -13,7 +12,6 @@ public class ScreenAsBytes {
         		else {
         			stringOfInts += Integer.toString(0);
         		}
-        		count++;
             }
         }
         String[] stringOfBytes = stringOfInts.split("(?<=\\G.{8})");
@@ -28,7 +26,6 @@ public class ScreenAsBytes {
     public static void drawHorizontalLine(byte[] screen, int width, int startX, int endX, int y) {
     	int byteWidth = width / 8;
         int height = screen.length / byteWidth; 
-        int count = 0;
         String stringOfInts = "";
         for (int i1 = 0; i1 < height; i1++) {
         	for (int i2 = 0; i2 < width; i2++) {
@@ -38,7 +35,6 @@ public class ScreenAsBytes {
         		else {
         			stringOfInts += Integer.toString(0);
         		}	
-        		count++;
             }
         }
         String[] stringOfBytes = stringOfInts.split("(?<=\\G.{8})");
@@ -53,7 +49,6 @@ public class ScreenAsBytes {
     public static void drawVerticalLine(byte[] screen, int width, int x, int startY, int endY) {
     	int byteWidth = width / 8;
         int height = screen.length / byteWidth; 
-        int count = 0;
         String stringOfInts = "";
         for (int i1 = 0; i1 < height; i1++) {
         	for (int i2 = 0; i2 < width; i2++) {
@@ -63,7 +58,6 @@ public class ScreenAsBytes {
         		else {
         			stringOfInts += Integer.toString(0);
         		}	
-        		count++;
             }
         }
         String[] stringOfBytes = stringOfInts.split("(?<=\\G.{8})");
