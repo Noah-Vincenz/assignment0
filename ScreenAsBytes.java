@@ -14,11 +14,10 @@ public class ScreenAsBytes {
         		}
             }
         }
-        String[] stringOfBytes = stringOfInts.split("(?<=\\G.{8})");
+        String[] stringOfBytes = stringOfInts.split("(?<=\\G.{8})"); //to get strings of size 8
         int count2 = 0;
         for (String s : stringOfBytes) {
-            int i = Integer.parseInt(s, 2); //parses string s as signed integer in radix specified (2) – this returns the decimal of the byte
-            screen[count2] = (byte) i;
+            screen[count2] = (byte) Integer.parseInt(s, 2); //parses string s as signed integer in radix specified (2) – this returns the decimal of the byte
             count2++;
         }
     }
@@ -29,7 +28,7 @@ public class ScreenAsBytes {
         String stringOfInts = "";
         for (int i1 = 0; i1 < height; i1++) {
         	for (int i2 = 0; i2 < width; i2++) {
-        		if (i1 == y && i2 >=startX && i2 <= endX){
+        		if (i1 == y && i2 >= startX && i2 <= endX){
         			stringOfInts += Integer.toString(1);
         		}
         		else {

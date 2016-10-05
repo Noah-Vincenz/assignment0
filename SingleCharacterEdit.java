@@ -11,8 +11,8 @@ public class SingleCharacterEdit {
     	//test1: Replacing one character with another, at some position
     	if(arrayA.length == arrayB.length) {
     		for (int i = 0; i < arrayA.length; i++) { //looping through every character from the string
-    			if (arrayA[i] != arrayB[i]) {  
-    				if (changes == 0) {
+    			if (arrayA[i] != arrayB[i]) {  //if 
+    				if (changes == 0) { 
     					arrayA[i] = arrayB[i];
     					changes++;
     					char c = arrayB[i];
@@ -52,8 +52,7 @@ public class SingleCharacterEdit {
 	   		else {
 	   			return null;
     		}			
-    	}
-    	
+    	}  	
     	//test 3: Inserting a character at some position, before what was previously there
     	else if (arrayB.length == arrayA.length+1) {
 	    	for (int i = 0; i < arrayB.length; i++) { //looping through every character from the string
